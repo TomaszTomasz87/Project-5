@@ -81,3 +81,41 @@ body {
 	border-bottom: 2px solid #fff;
 	border-right: 2px solid #fff;
 }
+/* trzeci link */
+.three::before,
+.three::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	bottom: 0;
+	border-bottom: 2px solid #fff;
+}
+.three::before {
+	right: 50%;
+}
+.three::after {
+	left: 50%;
+}
+.three:hover::before, 
+.three:hover::after {
+	width: 50%;
+}
+/* czwarty link */
+.four::before,
+.four::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	bottom: 0;
+	border-bottom: 2px solid #fff;
+}
+.four::before {
+	right: 5%;
+}
+.four::after {
+	left: 5%;
+}
+.four:hover::before, 
+.four:hover::after {
+	width: 50%;
+}
