@@ -122,7 +122,6 @@ body {
 	height: 50%;
 }
 .four:hover::before {
-
 	border-left: 2px solid #fff;
 }
 .four:hover::after {
@@ -149,4 +148,65 @@ body {
 
 .five:hover::after {
 	height: 100%;
+}
+/* szósty link */
+.six {
+	z-index: 0;
+}
+.six:hover {
+	animation: blink 0.5s;
+}
+.six::before,
+.six::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 0;
+	background-color: #fff;
+	z-index: -1;
+}
+.six::before {
+	left: 0;
+}
+.six::after {
+	right: 0;
+}
+.six:hover::before,
+.six:hover::after {
+	animation: background 0.5s 0.4s forwards;
+}
+@keyframes background {
+	from {
+		width: 0;
+	}
+	to {
+		width: 50%;
+	}
+}
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	10% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0;
+	}
+	30% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
